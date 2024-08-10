@@ -149,7 +149,8 @@ ul {
   text-transform: uppercase;
   font-size: 17px;
   padding: 16px 0 13px;
-  background-image: linear-gradient(135deg, #3b82f6, #eab308, #ef4444, #16a34a);
+  /* background-image: linear-gradient(135deg, #3b82f6, #eab308, #ef4444, #16a34a); */
+  background-image: linear-gradient(135deg, #16a34a, #3b82f6, #eab308, #ef4444);
   border: none;
   color: inherit;
   transition: 0.3s;
