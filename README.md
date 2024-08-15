@@ -53,7 +53,7 @@ Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
 
 Avant de démarrer le serveur, vous devez configurer Supabase. Remplacez l'URL et la clé de Supabase dans le fichier `src/supabase.js` :
 
-````javascript
+```javascript
 import { createClient } from "@supabase/supabase-js";
 
 const supabaseUrl = "VOTRE_URL_SUPABASE";
@@ -62,6 +62,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 
 export default supabase;
 ```
+
     - Supabase URL : Vous pouvez obtenir l'URL depuis votre tableau de bord Supabase.
     - Supabase Key : Utilisez la clé publique de votre projet Supabase.
 
@@ -69,6 +70,8 @@ export default supabase;
 
    ```bash
     npm start
+   ```
+
 ````
 
 ou
@@ -95,3 +98,4 @@ L'application sera accessible à l'adresse http://localhost:3000.
   - **`Fact`** : Composant représentant un fait individuel.
 - **`src/supabase.js`** : Configuration et initialisation de Supabase pour la gestion des données.
 - **`src/style.css`** : Fichier de styles CSS pour la mise en forme de l'application.
+````
