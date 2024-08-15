@@ -49,19 +49,35 @@ Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
     yarn install
    ```
 
-4. **Démarrer le serveur de développement :**
+4. **Configurer Supabase :**
+
+Avant de démarrer le serveur, vous devez configurer Supabase. Remplacez l'URL et la clé de Supabase dans le fichier `src/supabase.js` :
+
+````javascript
+import { createClient } from "@supabase/supabase-js";
+
+const supabaseUrl = "VOTRE_URL_SUPABASE";
+const supabaseKey = "VOTRE_CLE_SUPABASE";
+const supabase = createClient(supabaseUrl, supabaseKey);
+
+export default supabase;
+```
+    - Supabase URL : Vous pouvez obtenir l'URL depuis votre tableau de bord Supabase.
+    - Supabase Key : Utilisez la clé publique de votre projet Supabase.
+
+5. **Démarrer le serveur de développement :**
 
    ```bash
     npm start
-   ```
+````
 
-   ou
+ou
 
-   ```bash
-    yarn start
-   ```
+```bash
+ yarn start
+```
 
-   L'application sera accessible à l'adresse http://localhost:3000.
+L'application sera accessible à l'adresse http://localhost:3000.
 
 ## Utilisation
 
