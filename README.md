@@ -1,72 +1,81 @@
-# FullSack-app-Today-I-Learned
+# Today I Learned
 
-# Getting Started with Create React App
+"Today I Learned" est une application web interactive qui permet aux utilisateurs de partager des faits intéressants, de voter sur ces faits et de filtrer les faits par catégorie. Développée en utilisant React et Supabase, cette application offre une expérience fluide et interactive pour explorer des faits intéressants.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Fonctionnalités
 
-## Available Scripts
+- **Affichage des Faits** : Affiche les faits triés par popularité.
+- **Filtrage par Catégorie** : Permet de filtrer les faits selon différentes catégories.
+- **Ajout de Faits** : Les utilisateurs peuvent partager de nouveaux faits via un formulaire.
+- **Vote sur les Faits** : Permet aux utilisateurs de voter sur les faits en trois catégories : Intéressant, Étonnant, et Faux.
+- **Indication des Faits Disputés** : Les faits avec plus de votes "Faux" que la somme des votes "Intéressant" et "Étonnant" sont marqués comme disputés.
 
-In the project directory, you can run:
+## Déploiement
 
-### `npm start`
+L'application est déployée et accessible en ligne à l'adresse suivante :
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[https://todayilearned-lady.netlify.app/](https://todayilearned-lady.netlify.app/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Prérequis
 
-### `npm test`
+Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Node.js](https://nodejs.org/) (Version 14 ou supérieure)
+- [npm](https://www.npmjs.com/) (ou [Yarn](https://yarnpkg.com/))
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Cloner le dépôt :**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   git clone https://github.com/Lydia-BEDRI/FullStack-app-Today-I-Learned.git
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Naviguer dans le répertoire du projet** :
 
-### `npm run eject`
+   ```bash
+    cd FullStack-app-Today-I-Learned
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **Installer les dépendances :**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ou
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+    yarn install
+   ```
 
-## Learn More
+4. **Démarrer le serveur de développement :**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+    npm start
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ou
 
-### Code Splitting
+   ```bash
+    yarn start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   L'application sera accessible à l'adresse http://localhost:3000.
 
-### Analyzing the Bundle Size
+## Utilisation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **Ajouter un Fait :** Cliquez sur le bouton "Share a fact" pour ouvrir le formulaire et ajouter un nouveau fait. Vous devrez entrer le texte du fait, fournir une source fiable, et choisir une catégorie.
+- **Voter sur un Fait :** Utilisez les boutons "👍", "🤯", ou "⛔️" pour voter sur les faits affichés. Les votes seront comptabilisés et mis à jour en temps réel.
+- **Filtrer par Catégorie :** Utilisez le menu de filtrage sur le côté pour voir les faits classés par catégorie. Les catégories disponibles incluent technologie, science, finance, société, divertissement, santé, histoire et actualités.
 
-### Making a Progressive Web App
+## Structure du Projet
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **`src/App.js`** : Composant principal de l'application qui gère l'état des faits, la logique d'affichage, et inclut tous les composants suivants :
+  - **`Header`** : Composant d'en-tête de l'application.
+  - **`NewFactForm`** : Formulaire pour ajouter de nouveaux faits.
+  - **`CategoryFilter`** : Composant pour filtrer les faits par catégorie.
+  - **`FactList`** : Liste des faits affichés.
+  - **`Fact`** : Composant représentant un fait individuel.
+- **`src/supabase.js`** : Configuration et initialisation de Supabase pour la gestion des données.
+- **`src/style.css`** : Fichier de styles CSS pour la mise en forme de l'application.
