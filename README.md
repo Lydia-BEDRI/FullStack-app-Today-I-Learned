@@ -72,9 +72,7 @@ export default supabase;
     npm start
    ```
 
-````
-
-ou
+   ou
 
 ```bash
  yarn start
@@ -98,4 +96,7 @@ L'application sera accessible à l'adresse http://localhost:3000.
   - **`Fact`** : Composant représentant un fait individuel.
 - **`src/supabase.js`** : Configuration et initialisation de Supabase pour la gestion des données.
 - **`src/style.css`** : Fichier de styles CSS pour la mise en forme de l'application.
-````
+
+```
+
+```
